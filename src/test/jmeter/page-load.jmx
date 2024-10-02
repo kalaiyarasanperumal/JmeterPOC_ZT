@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
-      <stringProp name="TestPlan.comments"></stringProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
-      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Page Load">
@@ -22,7 +18,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${PATH}">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${PATH}" enabled="true">
           <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
           <stringProp name="HTTPSampler.path">${PATH}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -71,7 +67,7 @@
               <threadCounts>true</threadCounts>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/jmeter-webload-example-master/results.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV URL Config">
@@ -156,7 +152,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/jmeter-webload-example-master/results.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results">
@@ -193,7 +189,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/jmeter-webload-example-master/results.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

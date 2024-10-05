@@ -59,7 +59,6 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>true</xml>
-              <html>true</html>
               <fieldNames>false</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>

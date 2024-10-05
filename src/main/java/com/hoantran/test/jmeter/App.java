@@ -1,4 +1,4 @@
-package src.main.java.com.hoantran.test.jmeter;
+package com.hoantran.test.jmeter;
 
 // import java.io.File;
 // import java.io.IOException;

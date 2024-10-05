@@ -68,8 +68,8 @@
             </value>
           </objProp>
           <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp>
+          <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp>
+          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp> -->
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV URL Config">
@@ -118,8 +118,8 @@
             </value>
           </objProp>
           <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/jmeter-webload-example-master/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp>
+          <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp>
+          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp> -->
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
@@ -157,8 +157,8 @@
             </value>
           </objProp>
           <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp>
+          <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp>
+          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp> -->
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results">
@@ -195,7 +195,9 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp>
+          <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
+          <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp>
+          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/results.jtl</stringProp> -->
         </ResultCollector>
         <hashTree/>
       </hashTree>

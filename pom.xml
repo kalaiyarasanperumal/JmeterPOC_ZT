@@ -31,7 +31,7 @@
      
 
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
-<jmeterOutputFolder>target/jmeter/output</jmeterOutputFolder>
+<jmeterOutputFolder>target/jmeter/results</jmeterOutputFolder>
                 <generateHtmlReport>true</generateHtmlReport>
 
 

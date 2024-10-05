@@ -59,7 +59,7 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>true</xml>
-
+              <html>true</html>
               <fieldNames>false</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -71,7 +71,7 @@
             </value>
           </objProp>
          
-          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/results.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/index.html</stringProp>
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV URL Config" enabled="true">

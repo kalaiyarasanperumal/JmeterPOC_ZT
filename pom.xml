@@ -32,7 +32,7 @@
 
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
 <jmeterOutputFolder>target/jmeter/output</jmeterOutputFolder>
-                
+                <generateHtmlReport>true</generateHtmlReport>
 
 
 </configuration>

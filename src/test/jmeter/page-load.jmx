@@ -5,10 +5,12 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Page Load">
-        <intProp name="ThreadGroup.num_threads">1000</intProp>
+        <intProp name="ThreadGroup.num_threads">10</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -18,7 +20,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${PATH}" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${PATH}">
           <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
           <stringProp name="HTTPSampler.path">${PATH}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -37,7 +39,7 @@
           </CacheManager>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -67,13 +69,10 @@
               <threadCounts>true</threadCounts>
             </value>
           </objProp>
-          <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/report.jtl</stringProp> -->
-        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV URL Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV URL Config" enabled="true">
           <stringProp name="delimiter">\n</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">url-list.txt</stringProp>
@@ -85,7 +84,7 @@
           <stringProp name="variableNames">PATH</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -118,53 +117,10 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/jmeter-webload-example-master/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/report.jtl</stringProp> -->
-        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
-</ResultCollector>
-        <hashTree/>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>true</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <url>true</url>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/report.jtl</stringProp> -->
-        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
+          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results">
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -198,12 +154,45 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
-          <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/report.jtl</stringProp> -->
-        <!-- <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp> -->
-        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.xml</stringProp>
-      </ResultCollector>
+          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.xml</stringProp>
+        </ResultCollector>
         <hashTree/>
       </hashTree>
     </hashTree>

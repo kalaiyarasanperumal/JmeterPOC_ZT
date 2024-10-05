@@ -24,7 +24,7 @@
         <testFile>page-load.jmx</testFile>
     </testFilesIncluded>
     <resultsDirectory>target/jmeter/results</resultsDirectory>
-    <resultsFileFormat>csv</resultsFileFormat>
+    <resultsFileFormat>xml</resultsFileFormat>
     <!-- Update the format pattern for resultsFileNameDateFormat -->
     <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
      

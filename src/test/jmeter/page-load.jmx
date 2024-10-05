@@ -56,7 +56,7 @@
               <subresults>true</subresults>
               <responseData>false</responseData>
               <samplerData>false</samplerData>
-              <xml>false</xml>
+              <xml>true</xml>
               <fieldNames>false</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -104,7 +104,7 @@
               <subresults>true</subresults>
               <responseData>false</responseData>
               <samplerData>false</samplerData>
-              <xml>false</xml>
+              <xml>true</xml>
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -143,7 +143,7 @@
               <subresults>true</subresults>
               <responseData>false</responseData>
               <samplerData>false</samplerData>
-              <xml>false</xml>
+              <xml>true</xml>
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -183,7 +183,7 @@
               <subresults>true</subresults>
               <responseData>false</responseData>
               <samplerData>false</samplerData>
-              <xml>false</xml>
+              <xml>true</xml>
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -201,7 +201,8 @@
           <!-- <stringProp name="filename">/Users/kalaiyarasan/Documents/JMETER/JmeterZucitechPocOCT_3/JmeterPOC_ZT/results.jtl</stringProp> -->
           <!-- <stringProp name="filename">/JmeterPOC_ZT/results.jtl</stringProp> -->
           <!-- <stringProp name="filename">/JmeterPOC_ZT/target/jmeter/report.jtl</stringProp> -->
-        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp>
+        <!-- <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.jtl</stringProp> -->
+        <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.xml</stringProp>
       </ResultCollector>
         <hashTree/>
       </hashTree>

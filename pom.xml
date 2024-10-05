@@ -21,15 +21,18 @@
                     <configuration>
     <testFilesDirectory>src/test/jmeter</testFilesDirectory>
     <testFilesIncluded>
-        <testFile>page-load.jmx</testFile>
+        <!-- <testFile>page-load.jmx</testFile> -->
+         <testFile>**/*.jmx</testFile>
     </testFilesIncluded>
-    <resultsDirectory>target/jmeter/results</resultsDirectory>
+    <!-- <resultsDirectory>target/jmeter/results</resultsDirectory> -->
     <resultsFileFormat>xml</resultsFileFormat>
     <!-- Update the format pattern for resultsFileNameDateFormat -->
     <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
      
 
-     <!-- <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder> -->
+<jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
+<jmeterOutputFolder>target/jmeter/output</jmeterOutputFolder>
+                
 
 
 </configuration>

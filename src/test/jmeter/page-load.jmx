@@ -71,7 +71,7 @@
           </objProp>
          
           <!-- <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/index.html</stringProp> -->
-              <stringProp name="filename">target/jmeter/results.jtl</stringProp> <!-- Update this path as needed -->
+              <stringProp name="filename">target/jmeter/resultshtml.jtl</stringProp> <!-- Update this path as needed -->
     <boolProp name="ResultCollector.error_logging">true</boolProp>
 
         </ResultCollector>

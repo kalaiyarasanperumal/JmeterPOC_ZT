@@ -196,7 +196,6 @@
             </value>
           </objProp>
           <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.xml</stringProp>
-          <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/output.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

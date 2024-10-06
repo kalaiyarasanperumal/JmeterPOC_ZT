@@ -201,6 +201,12 @@
           </objProp>
           <stringProp name="filename">/Users/kalaiyarasan/.jenkins/workspace/Test Jmeter/target/jmeter/report.xml</stringProp>
         </ResultCollector>
+
+        <DebugSampler guiclass="DebugSamplerGui" testclass="DebugSampler" testname="Debug Sampler">
+    <stringProp name="filename">/path/to/debug.log</stringProp>
+</DebugSampler>
+
+
         <hashTree/>
       </hashTree>
     </hashTree>

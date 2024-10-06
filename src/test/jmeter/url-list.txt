@@ -1,5 +1,5 @@
-https://abcnews.go.com
+https://abcnews.go.com*
 https://abcnews.go.com/Vi*deo
-https://abcnews.go.com/Video
-https://abcnews.go.com/Live
-https://abcnews.go.com/2020
+https://abcnews.go.com/Video*
+https://abcnews.go.com/Live*
+https://abcnews.go.com/2020*

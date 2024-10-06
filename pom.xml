@@ -33,12 +33,6 @@
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
                 <generateHtmlReport>true</generateHtmlReport>
 
-                 <jmeterArguments>
-                                <argument>-Dthreads=${THREAD_COUNT}</argument>
-                                <argument>-DrampUp=${RAMP_UP}</argument>
-                                <argument>-DloopCount=${LOOP_COUNT}</argument>
-                            </jmeterArguments>
-
 
 </configuration>
                 </execution>
@@ -92,7 +86,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-           <version>4.13.1</version>
+            <version>[4.13.1]</version>
         </dependency>
     </dependencies>
 </project>

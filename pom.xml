@@ -7,48 +7,63 @@
     <version>1.0-SNAPSHOT</version>
     <name>JMeter Webload</name>
 
-    <properties>
+
+     <properties>
         <jmeter.version>5.4</jmeter.version>
     </properties>
 
+    
     <build>
         <plugins>
-            <plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
-                <artifactId>jmeter-maven-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>jmeter-tests</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jmeter</goal>
-                        </goals>
-                        <configuration>
-                            <testFilesDirectory>src/test/jmeter</testFilesDirectory>
-                            <testFilesIncluded>
-                                <testFile>**/*.jmx</testFile>
-                            </testFilesIncluded>
-    <resultsFileFormat>xml</resultsFileFormat>
+               <plugin>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <id>jmeter-tests</id>
+                    <goals>
+                        <goal>jmeter</goal>
+                    </goals>
+                    <configuration>
+    <testFilesDirectory>src/test/jmeter</testFilesDirectory>
+    <testFilesIncluded>
+        <!-- <testFile>page-load.jmx</testFile> -->
+         <testFile>**/*.jmx</testFile>
+    </testFilesIncluded>
+    <!-- <resultsDirectory>target/jmeter/results</resultsDirectory> -->
     <resultsFileFormat>xml</resultsFileFormat>
     <!-- Update the format pattern for resultsFileNameDateFormat -->
-                            <resultsFileFormat>xml</resultsFileFormat>
-    <!-- Update the format pattern for resultsFileNameDateFormat -->
-    <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
     <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
      
 
-                            <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
-     
+<jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
+                <generateHtmlReport>true</generateHtmlReport>
 
-                            <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
-                            <generateHtmlReport>true</generateHtmlReport>
-                            <jmeterArgs>
-                                <jmeterArg>-Dthreads=${THREAD_COUNT}</jmeterArg> <!-- For thread count -->
-                                <jmeterArg>-DrampUp=${RAMP_UP}</jmeterArg>      <!-- For ramp up time -->
-                                <jmeterArg>-DloopCount=${LOOP_COUNT}</jmeterArg> <!-- For loop count -->
-                            </jmeterArgs>
-                    </configuration>
+ <jmeterArgs>
+                    <jmeterArg>-Dthreads=${THREAD_COUNT}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                  <jmeterArg>-Dthreads=${RAMP_UP}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                    <jmeterArg>-Dthreads=${LOOP_COUNT}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                
+                </jmeterArgs>
+
+
+</configuration>
+                </execution>
+            </executions>
+        </plugin>
+
+         <!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.8</version>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <configuration>
+                        <target>
+                            <echo message="JMeter Test Results are stored in: ${project.basedir}/target/jmeter/results/performance-test-results.csv" />
+                        </target>
                     </configuration>
                     <goals>
                         <goal>run</goal>
@@ -75,38 +90,13 @@
             <goals>
                 <goal>jmeter</goal>
             </goals>
-                        </configuration>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin> -->
-
-
-<plugin>
-    <groupId>com.lazerycode.jmeter</groupId>
-    <artifactId>jmeter-maven-plugin</artifactId>
-    <version>3.2.0</version>
-    <executions>
-        <execution>
-            <id>configuration</id>
-            <goals>
-                <goal>configure</goal>
-            </goals>
         </execution>
-        <execution>
-            <id>jmeter-tests</id>
-            <phase>verify</phase>
-            <goals>
-                <goal>jmeter</goal>
-            </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    
+    </executions>
+
+       <properties>
+        <jmeter.version>5.4</jmeter.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>jmeter</groupId>
@@ -119,5 +109,16 @@
             <version>${jmeter.version}</version>
         </dependency>
     </dependencies>
+    
+</plugin>
 
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>[3.0.0,]</version>
+        </dependency>
+    </dependencies>
 </project>

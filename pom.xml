@@ -28,6 +28,22 @@
     <resultsFileFormat>xml</resultsFileFormat>
     <!-- Update the format pattern for resultsFileNameDateFormat -->
     <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
+
+
+        <properties>
+        <property>
+            <name>THREAD_COUNT</name>
+            <value>100</value>
+        </property>
+        <property>
+            <name>RAMP_UP</name>
+            <value>1</value>
+        </property>
+        <property>
+            <name>LOOP_COUNT</name>
+            <value>10</value>
+        </property>
+    </properties>
      
 
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>

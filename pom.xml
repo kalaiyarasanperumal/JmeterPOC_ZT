@@ -33,6 +33,13 @@
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
                 <generateHtmlReport>true</generateHtmlReport>
 
+ <jmeterArgs>
+                    <jmeterArg>-Dthreads=${THREAD_COUNT}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                  <jmeterArg>-Dthreads=${RAMP_UP}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                    <jmeterArg>-Dthreads=${LOOP_COUNT}</jmeterArg> <!-- Replace THREAD_COUNT with a Jenkins parameter -->
+                
+                </jmeterArgs>
+
 
 </configuration>
                 </execution>

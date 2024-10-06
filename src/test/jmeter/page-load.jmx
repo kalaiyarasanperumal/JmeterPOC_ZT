@@ -10,21 +10,18 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Page Load">
-        <!-- <intProp name="ThreadGroup.num_threads">150</intProp>
-        <intProp name="ThreadGroup.ramp_time">1</intProp> -->
-         <intProp name="ThreadGroup.num_threads">${__P(THREAD_COUNT,)}</intProp>
-         <intProp name="ThreadGroup.ramp_time">${__P(RAMP_UP,)}</intProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <!-- <stringProp name="LoopController.loops">2</stringProp> -->
-          <stringProp name="LoopController.loops">${__P(LOOP_COUNT,)}</stringProp>
-          <boolProp name="LoopController.continue_forever">false</boolProp>
+<intProp name="ThreadGroup.num_threads">${__P(THREAD_COUNT,100)}</intProp>
+<intProp name="ThreadGroup.ramp_time">${__P(RAMP_UP,1)}</intProp>
+<boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+<stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+<elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+  <stringProp name="LoopController.loops">${__P(LOOP_COUNT,1)}</stringProp>
+  <boolProp name="LoopController.continue_forever">false</boolProp>
+</elementProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${PATH}">
-         
           <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
           <stringProp name="HTTPSampler.path">${PATH}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -35,14 +32,6 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-<!-- 
-            <stringProp name="HTTPSampler.path">${PATH}</stringProp>
-  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-  <stringProp name="HTTPSampler.method">${__P(REQUEST_METHOD,GET)}</stringProp>
-  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-  <boolProp name="HTTPSampler.postBodyRaw">false</boolProp> -->
-
-
         </HTTPSamplerProxy>
         <hashTree>
           <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
@@ -118,7 +107,6 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>true</xml>
-
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
@@ -155,7 +143,6 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>true</xml>
-
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>

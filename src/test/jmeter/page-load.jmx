@@ -11,7 +11,7 @@
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Page Load">
         <intProp name="ThreadGroup.num_threads">250</intProp>
-        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">2</intProp>
 <!-- <stringProp name="ThreadGroup.num_threads">${__P(THREAD_COUNT,100)}</stringProp> -->
   <!-- <stringProp name="ThreadGroup.ramp_time">${__P(RAMP_UP,2)}</stringProp> -->
 

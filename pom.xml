@@ -30,7 +30,7 @@
     <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
 
 
-        <properties>
+        <!-- <properties>
         <property>
             <name>THREAD_COUNT</name>
             <value>100</value>
@@ -44,7 +44,7 @@
             <value>10</value>
         </property>
     </properties>
-     
+      -->
 
 <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
                 <generateHtmlReport>true</generateHtmlReport>

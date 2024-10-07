@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kalaiyarasanperumal</groupId>
@@ -7,84 +8,52 @@
     <version>1.0-SNAPSHOT</version>
     <name>JMeter zucitech Poc</name>
     <build>
-    
         <plugins>
-               <plugin>
-            <groupId>com.lazerycode.jmeter</groupId>
-            <artifactId>jmeter-maven-plugin</artifactId>
-            <version>3.2.0</version>
-            <executions>
-                <execution>
-                    <id>jmeter-tests</id>
-                    <goals>
-                        <goal>jmeter</goal>
-                    </goals>
-                    <configuration>
-    <testFilesDirectory>src/test/jmeter</testFilesDirectory>
-    <testFilesIncluded>
-        <!-- <testFile>page-load.jmx</testFile> -->
-         <testFile>**/*.jmx</testFile>
-    </testFilesIncluded>
-    <!-- <resultsDirectory>target/jmeter/results</resultsDirectory> -->
-    <resultsFileFormat>xml</resultsFileFormat>
-    <!-- Update the format pattern for resultsFileNameDateFormat -->
-    <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
-     
-
-<jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
-
- <resultsOutputIsCSV>true</resultsOutputIsCSV>
-<reportDirectory>target/jmeter/reports/html</reportDirectory>
-
-                <generateHtmlReport>true</generateHtmlReport>
-
-
-</configuration>
-                </execution>
-            </executions>
-        </plugin>
-
-         <!-- <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>1.8</version>
-            <executions>
-                <execution>
-                    <phase>verify</phase>
-                    <configuration>
-                        <target>
-                            <echo message="JMeter Test Results are stored in: ${project.basedir}/target/jmeter/results/performance-test-results.csv" />
-                        </target>
-                    </configuration>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin> -->
-
-
-<plugin>
-    <groupId>com.lazerycode.jmeter</groupId>
-    <artifactId>jmeter-maven-plugin</artifactId>
-    <version>3.2.0</version>
-    <executions>
-        <execution>
-            <id>configuration</id>
-            <goals>
-                <goal>configure</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>jmeter-tests</id>
-            <phase>verify</phase>
-            <goals>
-                <goal>jmeter</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                        <configuration>
+                            <testFilesDirectory>src/test/jmeter</testFilesDirectory>
+                            <testFilesIncluded>
+                                <testFile>**/*.jmx</testFile>
+                            </testFilesIncluded>
+                            <resultsFileFormat>xml</resultsFileFormat>
+                            <resultsFileNameDateFormat>yyyyMMdd-HHmmss</resultsFileNameDateFormat>
+                            <jmeterResultsFolder>target/jmeter/results</jmeterResultsFolder>
+                            <resultsOutputIsCSV>true</resultsOutputIsCSV>
+                            <reportDirectory>target/jmeter/reports/html</reportDirectory>
+                            <generateHtmlReport>true</generateHtmlReport>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>configuration</id>
+                        <goals>
+                            <goal>configure</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
